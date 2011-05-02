@@ -1,0 +1,1 @@
+page[:response].update render(:partial => 'recent_tracks', :locals => { :tracks => @tracks })

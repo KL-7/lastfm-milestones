@@ -1,0 +1,2 @@
+module RecentTracksHelper
+end

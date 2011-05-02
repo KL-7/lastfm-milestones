@@ -1,0 +1,9 @@
+<% unless tracks.blank? %>
+  <ul>
+    <% tracks.each do |track| %>
+      <li><%= h "#{track.artist.name} - #{track.name}" %></li>
+    <% end %>
+  </ul>
+<% else %>
+  No tracks
+<% end %>

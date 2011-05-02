@@ -1,6 +1,4 @@
 require 'scrobbler'
 
-lastfm_info = YAML.load_file(Rails.root.join('config', 'lastfm.yml').to_s)
-
-Scrobbler::Base.api_key = lastfm_info['api_key']
-Scrobbler::Base.secret = lastfm_info['secret']
+Scrobbler::Base.api_key = ENV['LASTFM_API_KEY']
+Scrobbler::Base.secret = ENV['LASTFM_SECRET']

@@ -7,7 +7,7 @@ gem 'rails', '3.0.7'
 
 gem 'sqlite3'
 
-gem 'scrobbler-ng', :git => 'git@github.com:KL-7/scrobbler.git'
+gem 'scrobbler-ng', :git => 'git://github.com/KL-7/scrobbler.git'
 
 group :development do 
   gem 'mongrel'

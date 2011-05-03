@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:KL-7/scrobbler.git
+  remote: git://github.com/KL-7/scrobbler.git
   revision: fb5f591f9f380108158dfda7652025bceaf3ea2f
   specs:
     scrobbler-ng (2.0.10)

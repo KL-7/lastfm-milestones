@@ -1,9 +1,16 @@
-<% unless tracks.blank? %>
-  <ul>
-    <% tracks.each do |track| %>
-      <li><%= h "#{track.artist.name} - #{track.name}" %></li>
-    <% end %>
-  </ul>
+<% if error.blank? %>
+  <% unless tracks.blank? %>
+    <ul>
+      <% tracks.each do |track| %>
+        <li>
+          <%= link_to h(track.artist.name), track.artist.url %> - <%= link_to h(track.name), track.url %>
+          <span class="time"><%= h "(#{track.now_playing ? 'now playing' : time_ago_in_words(track.date)})" %></span>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    No tracks
+  <% end %>
 <% else %>
-  No tracks
+  <div class="error"><%= h error %></div>
 <% end %>
